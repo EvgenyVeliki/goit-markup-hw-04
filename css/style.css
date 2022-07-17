@@ -14,6 +14,7 @@
   --button-bg-cl: #2196f3;
   --line-bg-cl: #e5e5e5;
   --button-main-bg-cl: #188ce8;
+  --icons-bg-cl: #afb1b8;
   /* ===============================Other color */
 }
 
@@ -78,9 +79,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
 }
 
 /* ==============================Hedear section */
@@ -168,10 +166,16 @@ img {
 
 .header-contacts {
   display: flex;
+  align-items: center;
 }
 
 .contacts-item + .contacts-item {
   margin-left: 50px;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: center;
 }
 
 .contacts-link-maill {
@@ -185,8 +189,19 @@ img {
 }
 
 /* ==============================Hero section */
+.hero-overley {
+  max-width: 1600px;
+  height: 600px;
+  background-image: url(../img/hero/img-hero.jpg);
+  background-color: rgba(47, 48, 58, 0.4);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero {
-  background-color: var(--dark-bg-cl);
   text-align: center;
   padding: 200px 0;
 }
@@ -242,8 +257,8 @@ img {
 .about-item {
   flex-basis: 270px;
 }
-
 .about-title {
+  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -280,7 +295,8 @@ img {
 }
 
 .our-work-title,
-.team-title {
+.team-title,
+.our-clients-title {
   margin-bottom: 50px;
   text-align: center;
   font-weight: 700;
@@ -304,6 +320,7 @@ img {
 }
 
 .speciality {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
@@ -392,6 +409,48 @@ img {
   color: var(--header-bg-cl);
 }
 
+.button-item:focus,
+.button-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* ===========================Our clients */
+
+.our-clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.our-clients-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icons-bg-cl);
+  border-radius: 4px;
+}
+
+.our-clients-icon {
+  fill: var(--icons-bg-cl);
+}
+
+.our-clients-image:hover,
+.our-clients-image:focus {
+  border: 1px solid var(--button-bg-cl);
+}
+
+.our-clients-image:hover .our-clients-icon {
+  fill: var(--button-bg-cl);
+}
+
+.our-clients-image:focus .socials-icon {
+  fill: var(--button-bg-cl);
+}
+
 /* ==============================Footer */
 .logo-link-footer {
   font-family: var(--secondary-front);
@@ -415,11 +474,16 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.contacts-adress {
+  margin-right: 70px;
+}
 .footer-item {
   margin-bottom: 10px;
 }
-
 .footer-item:last-child {
   margin: 0;
 }
@@ -448,4 +512,95 @@ img {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--header-bg-cl);
+}
+
+/* ================================Socials icons */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--header-bg-cl);
+  border-radius: 50%;
+}
+
+.socials-icon {
+  fill: var(--icons-bg-cl);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--button-bg-cl);
+}
+
+.socials-link:hover .socials-icon {
+  fill: var(--header-bg-cl);
+}
+
+.socials-link:focus .socials-icon {
+  fill: var(--header-bg-cl);
+}
+
+/* =====================================Image About section  */
+
+.about-image {
+  display: block;
+  width: 270px;
+  height: 120px;
+
+  background-color: var(--our-team-bg-cl);
+  border-radius: 4px;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===========================================Header-icons */
+.header-icons {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+/*=========================================== Footer-icons */
+
+.footer-icons-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icons-txt {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: var(--header-bg-cl);
+}
+
+.footer-icons-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-icon {
+  fill: var(--header-bg-cl);
+}
+
+.footer-icons-link:hover,
+.footer-icons-link:focus {
+  background-color: var(--button-bg-cl);
 }

@@ -177,6 +177,8 @@ img {
 }
 
 .contacts-link-maill {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -190,7 +192,8 @@ img {
 .hero-overley {
   max-width: 1600px;
   height: 600px;
-  background-image: url(../img/hero/img-hero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero/img-hero.jpg);
   background-color: rgba(47, 48, 58, 0.4);
   background-repeat: no-repeat;
   background-position: center;
@@ -578,6 +581,7 @@ img {
 }
 
 .footer-icons-txt {
+  font-weight: 700;
   margin-bottom: 20px;
   font-size: 14px;
   line-height: calc(16 / 14);
